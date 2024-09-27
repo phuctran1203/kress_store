@@ -1,0 +1,94 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+.header {
+	height: 55px;
+	.navbar-brand {
+		height: 100%;
+		img {
+			height: 100%;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			mix-blend-mode: darken;
+		}
+		.shop-name {
+			font-family: "Poetsen One", sans-serif;
+			font-size: 23px;
+		}
+	}
+
+	.navbar-toggler:focus {
+		box-shadow: none;
+	}
+	.offcanvas {
+		height: 100%;
+		.offcanvas-header .offcanvas-title {
+			font-family: "Poetsen One", sans-serif;
+		}
+		.offcanvas-body {
+			.navbar-middle ul {
+				width: fit-content;
+				border-radius: 20px;
+				align-items: center;
+				li {
+					height: 36px;
+					border-radius: 20px;
+					box-sizing: border-box;
+
+					transition: transform 0.2s ease-out, background-image 0.2s ease-out, box-shadow 0.2s ease-out;
+					&.active {
+						background-image: linear-gradient(to right, #9796f0, #fea8ff);
+						box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.22);
+						transform: translateY(-3px);
+						* {
+							color: white;
+						}
+					}
+					&:not(.active):hover {
+						transform: translateY(-3px);
+					}
+				}
+			}
+
+			.navbar-right ul {
+				li {
+					height: 36px;
+
+					transition: transform 0.2s ease-out;
+					&:not(.active):hover {
+						transform: translateY(-3px);
+					}
+					.image {
+						height: 38px;
+						aspect-ratio: 1/1;
+						overflow: hidden;
+						border-radius: 50%;
+						transform: translateX(3px);
+						img {
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: map-get($grid-breakpoints, md)) {
+	.navbar {
+		.offcanvas .offcanvas-body .navbar-middle ul {
+			background-color: transparent;
+			box-shadow: none;
+			align-items: start;
+			li {
+				&.active {
+					// &:not(.active):hover {
+					background: transparent;
+					box-shadow: none;
+					transform: translateY(0px);
+					* {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}

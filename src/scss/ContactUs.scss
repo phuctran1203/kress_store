@@ -1,0 +1,43 @@
+$box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+.contact-us {
+	background-color: rgb(255, 255, 255, 0.5);
+	border-radius: 20px;
+	box-shadow: $box-shadow;
+	overflow: hidden;
+	h2 {
+		font-family: "Poetsen One", sans-serif;
+	}
+	form {
+		label::after {
+			background-color: transparent !important;
+		}
+		input,
+		textarea {
+			border: 1px solid rgb(0, 0, 0, 0.2);
+			background-color: transparent;
+			&:focus {
+				border: 1px solid linear-gradient(to right, #9796f0, #fea8ff);
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+		.submit-btn {
+			background: white;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+			&:hover {
+				border-color: transparent;
+				color: white;
+				background: linear-gradient(to right, #9796f0, #fea8ff);
+			}
+		}
+	}
+	ul li {
+		list-style-type: none;
+	}
+	.map {
+		iframe {
+			transform: scale(102%) translateY(-2px);
+		}
+	}
+}

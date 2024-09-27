@@ -1,0 +1,115 @@
+@import "./Variables.scss";
+
+.product-detail {
+	background-color: rgb(255, 255, 255, 0.5);
+	margin: 3rem auto;
+	border-radius: 20px;
+	box-shadow: $box-shadow;
+	.group-image-product {
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
+		overflow: hidden;
+		background-color: white;
+	}
+	.detail {
+		background-color: white;
+		overflow: hidden;
+		border-top-right-radius: 16px;
+		border-bottom-right-radius: 16px;
+		& > * {
+			padding-left: 10px;
+		}
+		.title {
+			background-color: #f9f9f9;
+		}
+		.avg-rate-star {
+			width: 100px;
+			height: 20px;
+			position: relative;
+			.progress {
+				z-index: 1;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				.progress-bar {
+					background-color: #ff00bb;
+					mask: url(#mask);
+				}
+			}
+			.stars {
+				position: relative;
+				z-index: 0;
+				path {
+					fill: #e9e9e9;
+				}
+			}
+			.mask-stars {
+				position: absolute;
+				z-index: 1;
+				path {
+					fill: white;
+				}
+			}
+		}
+		.amount {
+			input[type="number"]::-webkit-outer-spin-button,
+			input[type="number"]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			input[type="number"] {
+				width: 30px;
+				text-align: center;
+				border: 0;
+				&:focus {
+					outline: none;
+				}
+			}
+			.btn-amount-group {
+				width: fit-content;
+				border-radius: 20px;
+				border: 1px solid rgb(225, 225, 225);
+				padding: 2px;
+				display: flex;
+				align-items: center;
+				.minus,
+				.plus {
+					background-color: transparent;
+					border: 0;
+					border-radius: 50%;
+					width: 25px;
+					height: 25px;
+					display: grid;
+					place-content: center;
+					&:hover {
+						background-color: rgb(234, 234, 234);
+					}
+					&:active {
+						background-color: rgb(225, 225, 225);
+					}
+				}
+				.minus {
+					padding-bottom: 3px;
+				}
+			}
+		}
+		.price {
+			background-color: #f9f9f9;
+		}
+		.button-group {
+			position: relative;
+			z-index: 2;
+			& > :first-child {
+				background: $bg-gradient;
+				border: 0;
+				color: white;
+			}
+			& > :last-child {
+				border: 0px solid rgb(99, 99, 99);
+				background-color: white;
+				box-shadow: $box-shadow;
+			}
+		}
+	}
+}

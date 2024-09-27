@@ -1,0 +1,24 @@
+body {
+	font-family: "Noto Sans", sans-serif;
+	height: max-content;
+	position: relative;
+	&::before {
+		z-index: -1;
+		position: absolute;
+		content: "";
+		inset: 0;
+		background: #ffffff;
+		background-image: radial-gradient(at 73.4% 27.1%, #edd9ff 0px, transparent 50%),
+			radial-gradient(at 52.9% 75.7%, #e3ffff 0px, transparent 50%),
+			radial-gradient(at 26.6% 90.9%, #fffef7 0px, transparent 50%),
+			radial-gradient(at 29.1% -8.5%, #b8beff 0px, transparent 50%),
+			radial-gradient(at 77% 73%, hsl(211, 100%, 91%) 0px, transparent 50%),
+			radial-gradient(at 26.1% 59.4%, hsl(291, 100%, 87%) 0px, transparent 50%);
+		background-size: cover;
+		background-repeat: no-repeat;
+		filter: blur(20px);
+	}
+	.main {
+		max-width: 1500px;
+	}
+}

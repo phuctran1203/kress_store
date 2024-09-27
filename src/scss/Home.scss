@@ -1,0 +1,64 @@
+@import "./Variables.scss";
+@keyframes slideup {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.home > * {
+	background-color: rgb(255, 255, 255, 0.5);
+	margin: 1rem 0 3rem 0;
+	border-radius: 20px;
+	box-shadow: $box-shadow;
+	&.banner-group {
+		.banner {
+			padding: 1rem;
+		}
+		.carousel {
+			border-radius: 20px;
+			overflow: hidden;
+		}
+	}
+
+	&:not(.banner-group) {
+		position: relative;
+		.name-part {
+			h3 {
+				font-family: "Poetsen One", sans-serif;
+				color: #ffffff;
+				padding: 2px 50px 8px 50px;
+				border-radius: 0% 0% 50px 50px / 0% 0% 100% 100%;
+				box-shadow: 0 -20px 10px -20px rgba(0, 0, 0, 0.45) inset;
+				text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+				position: relative;
+				background-image: linear-gradient(to right, #9796f0, #fea8ff);
+				transition: padding 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			}
+		}
+		.product-item {
+			opacity: 0;
+			animation-delay: var(--delay) !important;
+			animation: slideup 1s forwards;
+		}
+		.show-more {
+			width: fit-content;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			background-color: rgb(255, 255, 255, 1);
+			border-radius: 20px;
+			box-shadow: $box-shadow;
+		}
+		&:hover {
+			.name-part h3 {
+				padding-left: 70px;
+				padding-right: 70px;
+			}
+		}
+	}
+}

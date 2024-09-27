@@ -1,0 +1,18 @@
+.user {
+	background-color: white;
+	border-radius: 20px;
+	li {
+		list-style-type: none;
+		cursor: pointer;
+		padding-left: 5px;
+		margin: 5px 0;
+	}
+}
+.confirm-box {
+	z-index: 100;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.082);
+}

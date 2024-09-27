@@ -1,0 +1,17 @@
+.search-bar {
+	width: 600px;
+	#search-input {
+		height: 38px;
+		background-color: rgba(255, 255, 255, 0.5);
+		transition: all 0.2s linear;
+		&:focus {
+			outline: none;
+			background-color: rgba(255, 255, 255, 1);
+		}
+	}
+	#seach-button {
+		right: 0;
+		width: 45px;
+		aspect-ratio: 1/1;
+	}
+}

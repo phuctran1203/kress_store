@@ -1,0 +1,79 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "./Variables.scss";
+.cart {
+	.empty-cart {
+		height: 200px;
+	}
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 2rem auto;
+
+	input[type="checkbox"] {
+		width: 1.2rem;
+		aspect-ratio: 1/1;
+	}
+	input[type="number"] {
+		width: 30px;
+		text-align: center;
+		border: 0;
+		&:focus {
+			outline: none;
+		}
+	}
+
+	& > * {
+		background-color: rgb(255, 255, 255);
+		border: 1px solid rgb(245, 245, 245);
+		// padding: 2px 0;
+		& > * {
+			padding: 7px;
+		}
+	}
+	.check-box {
+		width: fit-content;
+	}
+	.amount {
+		.btn-amount-group {
+			border-radius: 20px;
+			border: 1px solid rgb(225, 225, 225);
+			padding: 2px;
+			display: flex;
+			align-items: center;
+			.minus,
+			.plus {
+				background-color: transparent;
+				border: 0;
+				border-radius: 50%;
+				width: 25px;
+				height: 25px;
+				display: grid;
+				place-content: center;
+				&:hover {
+					background-color: rgb(234, 234, 234);
+				}
+				&:active {
+					background-color: rgb(225, 225, 225);
+				}
+			}
+			.minus {
+				padding-bottom: 3px;
+			}
+		}
+	}
+	#btn-next {
+		color: white;
+		background: $bg-gradient;
+		position: relative;
+		box-shadow: 0 2px 0 rgb(165, 165, 165);
+		&:active {
+			transform: translateY(2px);
+			box-shadow: 0 0px 0 rgb(165, 165, 165);
+		}
+	}
+}
